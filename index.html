@@ -10,17 +10,25 @@
 <body>
 
   <header>
+
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
         <!-- <li><a href="portfolio.html">portfolio</a></li> -->
         <li><a href="#services">Services</a></li>
+
         <li><a href="#Social Accounts">Social Accounts</a></li>
-        <li><a href="#portfolio">Contact</a></li>
+
+        <li><a href="#portfolio">Portfolio</a></li>
+
         <li><a href="#contact">Contact</a></li>
       </ul>
+      
     </nav>
-    <h1 id = "wtitle">Welcome to NTKVLab</h1>
+    <div style="display: flex; align-items: center; margin: 10px auto;  justify-content: center;">    
+      <img src="man-happy-expression.png" alt=""  class="Logo">      
+      <h1 id = "wtitle">Welcome to NTKVLab</h1>
+    </div>
 
     <script>
        function openOverlay(id) {
@@ -57,20 +65,6 @@
       showSlides(slideIndex[id], id);
     }
           document.addEventListener('DOMContentLoaded', function() {
-       
-
-      // let slideIndex = 0;
-      // const slides = document.querySelectorAll('.slide');
-      // const totalSlides = slides.length;
-    
-      // function showSlides() {
-      //   slides.forEach((slide, index) => {
-      //     slide.style.transform = `translateX(-${slideIndex * 100}%)`;
-      //   });
-      //   slideIndex = (slideIndex + 1) % totalSlides;
-      // }
-    
-      // setInterval(showSlides, 3000); // Change image every 3 seconds
 
      
     });
@@ -78,85 +72,7 @@
   </header>
 
   <main>
-
-    <section id = "portfolio">
-      <h1 style="margin-top: -30px;">/* Projects i've worked on */</h1>
-      <div class="container" style=" width: 700px; background-color: rgb(248, 255, 156);">
-        <div class="portfolio-content">
-          <div class="header">
-            <h1 onclick="openOverlay('overlay1')">Realtime IoT Dashboard for Room Monitoring</h1>
-          </div>
-        </div>
-      </div>
-  
-      <div class="container" onclick="openOverlay('overlay2')" style="width: 700px; background-color: rgb(248, 255, 156);">
-        <div class="portfolio-content">
-          <div class="header">
-            <h1 >Realtime IoT Dashboard for Room Monitoring</h1>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- <div id="overlay1" class="overlay">
-      <div class="overlay-content">
-        <span class="close-btn" onclick="closeOverlay('overlay1')">&times;</span>
-        <div class="images">
-          <img src="main-dashboard.png"     alt="Image 1">
-          <img src="settings page.png"      alt="Image 2">
-          <img src="climate-dashboard.png"  alt="Image 3">
-        </div>
-        <div class="description">
-          <p>This is the description of the Realtime IoT Dashboard for Room Monitoring, highlighting its features and functionalities.</p>
-        </div>
-      </div>
-    </div> -->
-
-
-    <div id="overlay1" class="overlay">
-      <div class="overlay-content">
-        <span class="close-btn" onclick="closeOverlay('overlay1')">&times; Close</span>
-        <div class="slider">
-          <div class="slides">
-            <img src="main-dashboard.png" alt="Image 1">
-            <img src="settings page.png" alt="Image 2">
-            <img src="climate-dashboard.png" alt="Image 3">
-          </div>
-        </div>
-        <div class="navigation">
-          <button class="prev" onclick="changeSlide(-1, 'overlay1')">&#10094; PREV </button>
-          <button class="next" onclick="changeSlide(1, 'overlay1')">&#10095;  NEXT </button>
-        </div>
-        <div class="description">
-          <p>This is the description of the Realtime IoT Dashboard for Room Monitoring, highlighting its features and functionalities.</p>
-        </div>
-      </div>
-    </div>
-
-
     
-    <div id="overlay2" class="overlay">
-      <div class="overlay-content">
-        <span class="close-btn" onclick="closeOverlay('overlay2')">&times; Close</span>
-        <div class="slider">
-          <div class="slides">
-            <img src="main-dashboard.png" alt="Image 1">
-            <img src="settings page.png" alt="Image 2">
-            <img src="climate-dashboard.png" alt="Image 3">
-          </div>
-        </div>
-        <div class="navigation">
-          <button class="prev" onclick="changeSlide(-1, 'overlay2')">&#10094; PREV </button>
-          <button class="next" onclick="changeSlide(1, 'overlay2')">&#10095;  NEXT </button>
-        </div>
-        <div class="description">
-          <p>This is the description of the Realtime IoT Dashboard for Room Monitoring, highlighting its features and functionalities.</p>
-        </div>
-      </div>
-    </div>
-  
-  
-
     <section id="home">
       <div class="container">
         <h2>About NTKVLab</h2>
@@ -177,7 +93,7 @@
         </p>
       </div>
     </section>
-
+    
     <section id="services">
       <div class="container">
         <h2>My Services</h2>
@@ -218,10 +134,92 @@
       </div>
     </section>
 
+    <section id = "portfolio"> 
+      <h1 style="margin-top: -30px;">/* Projects i've worked on (Click to view) */</h1>
+      <div class="container" style=" width: 700px; background-color: rgb(248, 255, 156);">
+        <div class="portfolio-content">
+          <div class="header">
+            <h1 onclick="openOverlay('overlay1')">Realtime IoT Dashboard for Room Monitoring</h1>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container" onclick="openOverlay('overlay2')" style="width: 700px; background-color: rgb(248, 255, 156);">
+        <div class="portfolio-content">
+          <div class="header">
+            <h1 >IoT Voice Recorder </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    
+    <div id="overlay1" class="overlay">
+      <div class="overlay-content">
+      
+        <div class="slider">
+          <div class="slides">
+            <img src="main-dashboard.png" alt="Image 1">
+            <img src="settings page.png" alt="Image 2">
+            <img src="climate-dashboard.png" alt="Image 3">
+          </div>
+        </div>
+        <div class="navigation">
+          <span class="close-btn" onclick="closeOverlay('overlay1')">&times; Close</span>
+          <button class="prev" onclick="changeSlide(-1, 'overlay1')">&#10094; PREV </button>
+          <button class="next" onclick="changeSlide(1, 'overlay1')">&#10095;  NEXT </button>
+        </div>
+        <div class="description">
+          <p>This is the description of the Realtime IoT Dashboard for Room Monitoring, highlighting its features and functionalities.</p>
+        </div>
+      </div>
+    </div>
+
+
+    
+    <div id="overlay2" class="overlay">
+      <div class="overlay-content">
+        
+        <div class="slider">
+          <div class="slides">
+            <img src="wifi-manager.png"  alt="Image 1">
+            <img src="iot_vo.png" alt="Image 2">
+            <!-- <img src="climate-dashboard.png" alt="Image 3"> -->
+          </div>
+        </div>
+        <div class="navigation">
+          <span class="close-btn" onclick="closeOverlay('overlay2')">&times; Close</span>
+          <button class="prev" onclick="changeSlide(-1, 'overlay2')">&#10094; PREV </button>
+          <button class="next" onclick="changeSlide(1, 'overlay2')">&#10095;  NEXT </button>
+        </div>
+
+        <div class="description">
+          <p> This project had the following components to implement :   
+        </p>
+        
+        <div style="justify-content: left;">
+            <ul>
+            <li>
+              Create a Voice recorder, Using I2S Microphone.
+            </li>
+            <li>
+              Implement a Mechanism to Sync recordings to the server. Also, Keep track of files to sync while the connection is lost.
+            </li>
+            <li>
+              Implementing a custom wifi manager.
+            </li>
+            </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  
 
     <section id="Social Accounts">
       <div class="container">   
-        <h2>Social Accounts</h2>
+        <h2>Find Me On:</h2>
         
         <a href="https://www.linkedin.com/in/naitik-s-8aa03b181/" target="blank">
         <img src="linkedin-logo.png" height="40" width="40" style="margin-right: 10px;" >
