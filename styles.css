@@ -5,9 +5,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensures the page takes up at least the full viewport height */
-      font-family: 'VT323', sans-serif;
+      font-family:  sans-serif;
       font-weight: 200;
-      font-size:xx-large;
+      font-size:medium;
   }
   header {
     background-color: rgb(119, 0, 255);
