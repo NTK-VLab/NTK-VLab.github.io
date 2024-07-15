@@ -31,6 +31,9 @@
     </div>
 
     <script>
+
+
+      
        function openOverlay(id) {
         document.getElementById(id).style.display = "block";
         showSlides(1,id);
@@ -64,6 +67,79 @@
       slideIndex[id] += n;
       showSlides(slideIndex[id], id);
     }
+
+    const portfolioItems = [
+    {
+      title: 'Realtime IoT Dashboard for Room Monitoring',
+      images: ['main-dashboard.png', 'settings page.png', 'climate-dashboard.png'],
+      description: 'This is the description of the Realtime IoT Dashboard for Room Monitoring, highlighting its features and functionalities.'
+    },
+    {
+      title: 'IoT Voice Recorder',
+      images: ['wifi-manager.png', 'iot_vo.png'],
+      description: 'This project had the following components to implement:\n\n- Create a Voice recorder, Using I2S Microphone.\n- Implement a Mechanism to Sync recordings to the server. Also, Keep track of files to sync while the connection is lost.\n- Implementing a custom wifi manager.'
+    },
+    {
+      title: 'MicroCanvas 2D Graphics Engine',
+      images: ['2d_ge_objects_structure.png', 'microcanvas-demo.png', 'componentsofucanvas.png'],
+      description: 'MicroCanvas is Graphics Engine targeted for the Embedded systems you can make complex and scalable 2D games and GUI applications very easily'
+    }
+    // Add more items as needed
+    ];
+
+    function generatePortfolioItems() {
+    const portfolioSection = document.getElementById('portfolio');
+    const overlayContainer = document.getElementById('overlayContainer');
+
+    portfolioItems.forEach((item, index) => {
+      const itemId = `overlay${index + 1}`;
+
+    
+      // Create portfolio item
+      const portfolioItem = document.createElement('div');
+      portfolioItem.className = 'container';
+      portfolioItem.style.width = '700px';
+      portfolioItem.style.backgroundColor = 'rgb(248, 255, 156)';
+      portfolioItem.onclick = () => openOverlay(itemId);
+      portfolioItem.innerHTML = `
+        <div class="portfolio-content">
+          <div class="header">
+            <h1>${item.title}</h1>
+          </div>
+        </div>
+      `;
+
+      portfolioSection.appendChild(portfolioItem);
+
+      // Create overlay
+      const overlay = document.createElement('div');
+      overlay.id = itemId;
+      overlay.className = 'overlay';
+      overlay.style.display = 'none'; // Initially hidden
+      overlay.innerHTML = `
+        <div class="overlay-content">
+          <div class="slider">
+            <div class="slides">
+              ${item.images.map(image => `<img src="${image}" alt="Project Image">`).join('')}
+            </div>
+          </div>
+          <div class="navigation">
+            <span class="close-btn" onclick="closeOverlay('${itemId}')">&times; Close</span>
+            <button class="prev" onclick="changeSlide(-1, '${itemId}')">&#10094; PREV </button>
+            <button class="next" onclick="changeSlide(1, '${itemId}')">&#10095;  NEXT </button>
+          </div>
+          <div class="description">
+            <p>${item.description}</p>
+          </div>
+        </div>
+      `;
+
+      overlayContainer.appendChild(overlay);
+    });
+  }
+
+  // Generate portfolio items on page load
+    window.onload = generatePortfolioItems;
           document.addEventListener('DOMContentLoaded', function() {
 
      
@@ -134,8 +210,10 @@
       </div>
     </section>
 
-    <section id = "portfolio"> 
-      <h1 style="margin-top: -30px;">/* Projects i've worked on (Click to view) */</h1>
+ <section id = "portfolio"> 
+  <div id="overlayContainer"></div>
+</section>
+      <!-- <h1 style="margin-top: -30px;">/* Projects i've worked on (Click to view) */</h1>
       <div class="container" style=" width: 700px; background-color: rgb(248, 255, 156);">
         <div class="portfolio-content">
           <div class="header">
@@ -186,7 +264,7 @@
           <div class="slides">
             <img src="wifi-manager.png"  alt="Image 1">
             <img src="iot_vo.png" alt="Image 2">
-            <!-- <img src="climate-dashboard.png" alt="Image 3"> -->
+            
           </div>
         </div>
         <div class="navigation">
@@ -214,7 +292,7 @@
         </div>
         </div>
       </div>
-    </div>
+    </div> -->
   
 
     <section id="Social Accounts">
