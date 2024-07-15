@@ -134,6 +134,7 @@
       overlay.style.display = 'none'; // Initially hidden
       overlay.innerHTML = `
         <div class="overlay-content">
+          <h1 style="color:rgb(182, 57, 255); background-color: rgb(238, 238, 96); border-radius:5px">${item.title}</h1>
           <div class="slider">
             <div class="slides">
               ${item.images.map(image => `<img src="${image}" alt="Project Image">`).join('')}
