@@ -22,6 +22,7 @@ body {
   }
   
   nav {
+    font-weight: bold;
     max-width: 80%;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -109,7 +110,7 @@ body {
     padding: 50px 0;
     background-color: rgb(184, 182, 160);
     text-align: center;
-    width: 800px;
+    width: 1000px;
     margin: 0 auto; /* Center the container */
   } 
   
