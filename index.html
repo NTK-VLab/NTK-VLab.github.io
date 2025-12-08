@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
   <title>EmbedNexus</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
@@ -69,12 +69,31 @@
     }
 
     const portfolioItems = [
-
+    {
+      title: 'PCB Design Samples',
+      images: ['PCB_1.png', 'PCB_2.png', 'PCB_3.png', 'PCB_4.png'],
+      description: ''
+    },
+    {
+      title: 'Dove Transmitter Receiver for Industrial OH Cranes',
+      images: ['dove_info.png', 'dove_1.JPG', 'dove_2.JPG'],
+      description: 'Delivered Firmware for Dove Tx Rx Units From RAS Wireless'
+    },
    
     {
       title: 'Realtime IoT Dashboard for Room Monitoring',
       images: ['main-dashboard.png', 'settings page.png', 'climate-dashboard.png'],
-      description: 'This is the description of the Realtime IoT Dashboard for Room Monitoring, highlighting its features and functionalities.'
+      description: 'Front end UI done for ESP32S3 based room monitorting device by RoomSense IQ Crowd Supply project.'
+    },
+    {
+      title: 'USB Bootloader with Encryption support and GUI for STM32 MCU',
+      images: ['BL_1.png','BL_2.png','BL_3.png',],
+      description: 'In this project i was tasked to make bootloader that can flash encrypted firmware image and upload resources like images and animation slides'
+    },
+    {
+      title: 'DMX-RDM Driver on STM32G4',
+      images: [],
+      description: 'Ported Driver DMX RDM Drivers for ESP32 to work With STM32-HAL API'
     },
     {
       title: 'IoT Voice Recorder',
@@ -98,6 +117,9 @@
       Additionally, there is dedicated instruction to send Data over UART that offers an easy way to communicate to other devices or send logs to a PC.\
       This CPU has Assembler that can found in readme of linked project'
     },
+
+
+
 
     
     // Add more items as needed
@@ -137,7 +159,7 @@
           <h1 style="color:rgb(182, 57, 255); background-color: rgb(238, 238, 96); border-radius:5px">${item.title}</h1>
           <div class="slider">
             <div class="slides">
-              ${item.images.map(image => `<img src="${image}" alt="Project Image">`).join('')}
+              ${item.images.map(image => `<img src="${image}" alt="Project Image" class = "image_slide">`).join('')}
             </div>
           </div>
           <div class="navigation">

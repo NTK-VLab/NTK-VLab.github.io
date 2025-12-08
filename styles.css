@@ -142,7 +142,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    max-width: 1000px;
+    width: 1000px;
+    height: 1000px;
     background-color: #c88dff;
     padding: 20px;
     border-radius: 5px;
@@ -153,8 +154,8 @@ body {
     padding: 10px;
     background-color: rgb(238, 238, 96);
     position: absolute;
-    top: -20px; /* Moved up */
-    right: -20px; /* Moved to the right */
+    top: -20px;
+    right: -20px; 
     font-size: 30px;
     color: #ff0000;
     cursor: pointer;
@@ -166,12 +167,17 @@ body {
   
   .slides img {
     display: none;
-    width: 100%;
+    width: 80%;
+    margin-left: 250px;
+    width:50%;
     border-radius: 5px;
   }
   
   .slides img.active {
     display: block;
+    /* align-items: center; */
+    /* height: 300px;
+    width:auto;  */
   }
   
   .prev, .next {
@@ -219,3 +225,7 @@ body {
       max-width: 90%; /* Adjust for smaller screens */
   }
 }
+/* 
+.image_slide {
+  image-resolution: calc();
+} */
